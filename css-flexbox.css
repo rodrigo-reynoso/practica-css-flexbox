@@ -1,0 +1,505 @@
+/* el * toma toda la pagina y le pone a todo lo que yo quiere buena propiedad por defecto ya viene con un margin de 10px */
+* {
+     margin: 0; 
+     
+     /* IMPORTANTE EL PROBLEMA QUE NO TE APAREZCA LA BARRA EXPACIADORA EN MI SITIO ES QUE POR EL overflow: 
+     ; */
+
+    /* con overflow le estamos explicando que este dentro de la caja contenedora para todo el sitio */ 
+    /* esta funcion no es muy practica para ponerla en todo el body,ya que no hace scroll */
+    
+    /* overflow: hidden; NO SE UTILIZA EN EL ASTERISCO ---IMPORTANTE----- BIEN YO : ) */
+     /* overflow: hidden;  */
+
+    /* con box-sizing: borde-box; le indico que los padding entren simpre en su caja contenedora -----importante----- VER EN .columnax3 */
+    box-sizing: border-box;
+}
+/* SEGUNDA Y MEJOR OPCION PARA QUE TENGA LA FONT FAMILY PARA ESO TENEMOS QUE LLAMARLA ASI... */
+@font-face {
+    /* puedo inventar un nombre de la fuente que ya me baje */
+    font-family: instalada;
+    /* esto se usa para decirle donde esta instalada */
+    src: url(fuentes/Lobster-Regular.ttf);
+}
+
+
+.rojo {
+    color: red;
+    /* background: blue; */
+}
+.azul {
+    color: blue;
+    font-size: 20px;
+    /* background: coral; */
+}
+/* lo que hago aca es unir dos p con el divisor */
+.divisor {
+    background: chartreuse;
+}
+/* footer es el pie de pagina y es una etiqueta de html5 */
+
+.titulo {
+    background: #0ecc30;
+    /* margin: 10px;
+    padding: 10px; */
+    /* este es el ancho de la cajita IMPORTANTE */
+    width: 200px;
+}
+.parrafo {
+    background: #ff3d00;
+    /* padding: 10px; */
+    width: 200px;
+}
+/* Con estas cajas estoy viendo como es la propiedad float (flotacion)siempre despues de una flotacion la otra caja la tengo que limbiar con clear both para todos lados asi despues trabajo tranquilo---IMPORTANTE--- */
+.caja-1 {
+    border: 2px #000 solid;
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    float: left;
+}
+.caja-2 {
+    border: 2px #000 solid;
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    float: left;
+}
+.caja-3 {
+    border: 2px #000 solid;
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    float: right;
+}
+/* SI NO LIMPIO EL FLOAT ME VA A FLOTAR TODO HACIA ARRIBA SIEMPRE TENGO QUE LIMPIAR LO QUE VENGA DESPUES -----IMPORTANTISIMO----- */
+.titulo-2 {
+    clear: both;
+}
+.menu {
+    /* esto sirve PARA MI OPINION EN CADA LUGAR QUE QUIERO QUE OCUPE Y NO SE PEGUE CON LOS OTROS DIV, IGUAL FIJARME BIEN  */
+    overflow: hidden;
+    text-align: center;
+}
+.logo {
+    background: #a700ff;
+    float: left;
+    width: 30%;
+    
+}
+.nav {
+    width: 70%;
+    
+}
+.columnas {
+    background: #fff740;
+    width: 90%;
+    /* para centrarlo tengo que usar: */
+    margin: 0 auto;
+    text-align: center;
+}
+.columnax3 {
+    background-color: #994d7d;
+    /* para que ocupe toda la caja de .columna uso los porcentajes, de otra manera no se puede, ya que tendria que saber cuantos decimales tengo que poner */
+    width: 33.3333333%;
+    height: 100px;
+    /* con overflow le estamos diciendo que este todo en la caja contenedora .columnas buena funcion  */
+    float: left;
+    /* IMPORTANTE el padding suma el width con lo que le ponga en el padding, para achicarlo tengo que poner la propiedad box-sizing border-box para que achique atomaticamente el ancho y mantenga el padding que le puse ---IMPORTANTE------ */
+    padding: 10px;
+    /* los bordes tambien lo suman con el ancho width y tmbn me sirve la propiedad box sizing border-box */
+    border: 2px #000 solid;
+}
+.separacion {
+    margin: 10px;
+  
+}
+
+.verde-2 {
+    /* es clave poner esa funcion overflow: hidden; */
+    overflow: hidden;    
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    color: white;
+    margin: 0;
+    text-align: center;
+    /* para usar z-index: ; tengo que tener la position relative que es la que me permite mover la caja para donde yo quiero sin mover las otras cajas de abajo ---- buena herrramienta------ */
+    position: relative;
+    /* la posicion relativa te permite mover la caja a donde quieres sin mover el resto de las cajas  con top,bottom.left,right---IMPORTANTE--- */
+    top: 100px; 
+    right: -100px; /* es igual a decir left 100px */
+    /* z index le da mas importancia al numero mas grande siempre tenes que usar  la posicion relativa */
+    z-index: 100;
+    
+    padding-bottom: 100px;
+   
+}
+/* ESTO FUE PARA PONERLE BORDE A UNA SOLA CAJA PARA VER COMO SE PONIA Y SE PONE CON ESE CODIGO */
+.ubicar-en-div {
+        -webkit-text-stroke: 0.333px;
+        -webkit-text-stroke-color: rgb(212, 0, 255);
+}
+
+/* PROBANDO COSAS */
+.sep-de-los-div {
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 0.80px;
+    overflow: hidden;
+    word-break: break-all;
+    padding: 0;
+
+      
+}
+.posicionarlo {
+    height: 10px;
+    width: 100px;
+    padding-top: 0;
+    margin: 0;
+}
+.rojo-2 {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+.azul-2 {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+}
+/* se va a practicar posicionamiento absoluto */
+.verde-3 {
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    /* la diferecia entre relativo y absoluto es que rompe el fluj natural se puede desplazar con top,right,left y botton. Despues de poner el position absolute*/
+    /* Ademas el position absolute se mueve con respecto donde esta situado si hay un contenedor section se va mover con respecto a ese, sino, y en este caso mi contenedor absoluto es body */
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}
+
+.rojo-3 {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+}
+
+.azul-3 {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+}
+
+.verde-4 {
+    width: 200px;
+    height: 100px;
+    background-color:green;
+    color: #fff;
+    text-align: center;
+    /* te persigue por toda la pantalla sirve para los menus */
+   position: fixed;
+   bottom: 0;
+   right: 0;
+   margin: 0;
+   
+  /* IMPORTANTE CUANDO LE SACO EL bottom: ; Y EL right: ; ME DESAPARECE Y NO SE PORQUE */
+}
+
+.rojo-4 {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+}
+
+.azul-4 {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+}
+/* otra clase */
+nav {
+    /* con overflow: hidden;nunca se va a escapar nada del contenedor */
+    overflow: hidden;
+    background-color: chocolate;
+    height: 50px;
+    text-align: left;
+    /* box-sizing: border-box;es para que todos los elementos esten en el contenedor y no se escapen ---IMPORTANTE--- */
+    box-sizing: border-box;
+}
+.menu-a ul {
+    height: 100%;
+    padding-top: 11px;
+} 
+
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 50px;
+    /* este padding lo hago para simular un boton es el 100%del ancho y con la propiedad overflow: hidden; no se va del contenedor. no le puse bordes */
+    padding: 100% 10px;
+}
+nav ul li a:hover {
+    color: #fff;
+    background-color: #000;
+
+}
+.flotacion-logo {
+    padding-top: 11px;
+    float: left;
+    background-color: #999;
+    width: 30%;
+    height: 100%;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+   
+}
+.flotacion-logo a {
+    text-decoration: none;
+    /* hice lo mismo que en nav ul li a */
+    padding: 100% 10px;
+}
+.flotacion-logo a:hover {
+    color: #fff;
+    background-color: #000;
+}
+.menu-a {
+    float: right;
+    width: 70%;
+}
+.primer-metodo {
+    margin-top: 10px;
+    /* este es un buen metodo pero si llegan a cambiar la hoja de ruta no van a aparecer estas font-family */
+    font-family: 'Indie Flower', cursive;
+}
+.primer-metodo-combinado {
+
+    font-family: 'Fjalla One', sans-serif;
+}
+.segundo-metodo {
+    padding-top: 15px;
+    font-family: instalada;
+    letter-spacing: 0.5px;
+}
+.primera-letra {
+    margin-top: 18px;
+    /* esto es para dejar sangria de un parrafo */
+    text-indent: 2em;
+}
+
+/* esto es para que la primera letra del parrafo este mas grande */
+.primera-letra::first-letter {
+    
+    font-size: 50px;
+   line-height: 0;
+
+}
+.segundo-parrafo {
+    padding-top: 0px;
+    text-indent: 0.25em;
+}
+.segundo-parrafo::first-letter {
+    font-size: 20px;
+   /* line-height: 0; */
+}
+.contenedor-padre-flexbox {
+    width: 80%; 
+    height: 500px;   
+    background: #ff5c29;
+    margin: 50px auto;
+    /* es lo mismo que utilizar float left */
+    display: flex;
+    /* es la propiedad por defecto seguira estando igual que display flex */
+    /* flex-direction: row; */
+    /* es todo al reves es decir cba */
+    flex-direction: row;
+    /* con row-reversa no sucede lo mismo ---PROBALO------ */
+    /* es para utilizar cuando la quiero ver en un celular es decir siempre que haya un contenedor padre poniendo en el la propiedad de display flex con flex la voy a poder mover por donde quiera y como quiera mucho mas facil que FLOAT LEFT */
+    /* flex-direction: column; utilizar para ver mejor en los celulares */
+      /* flex-wrap: wrap;   */
+}
+.hijo-3 {
+    background: #c1a57b;
+    width: 200px;
+    height: 100px;
+    color: #ececec;
+    margin: 30px;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+    /* que todas abarquen lo que tenga que abarcar y si sobra espacio las ultimas ocupan proporcionalmente todo */
+    /* supuestamente van ocupando el 100% del ancho disponible pero con la prueba del contenedor 1 no me salio chequear eso y en algun momento me tiene que salir */
+    flex-grow: 1; 
+    /* flex: 1 1 auto; */
+}
+
+.hijo {
+    background: #00b285;
+    width: 200px;
+    height: 100px;
+    color: white;
+    margin: 30px;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+   
+}
+ /* .hijo-1 { 
+    background: #00b285;
+    width: 2px;
+    height: 1px;
+    color: white;
+    margin: 30px;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+     display: inline-flex; 
+     flex-direction: row; 
+}  */
+
+.mejorando-letra {
+    font-family: 'Fjalla One', sans-serif;
+    /* LE DI CONTORNO A LA LETRA PARA UTILIZARLO NADA MAS,antes habia algun navegador que no soportaba esta funcion ahora todos la soportan */
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgb(212, 0, 255);
+}
+.contenedor-padre-flexbox-2 {
+    width: 80%;
+    height: 500px;
+    background: #ff5c29;
+    margin: 50px auto;
+    display: flex;
+    /* para que mantenga el ancho de los hijos tengo que usar flex-wrap: wrap; */
+    flex-wrap: wrap;
+}
+.contenedor-padre-flexbox-3 {
+    width: 80%;
+    height: 500px;
+    background: #ff5c29;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify content tiene un monton de posicionamiento de los hijos */
+    justify-content: space-around;
+    /* con align items lo que hace es pocisionarte los elementos hijo donde quieras */
+    /* ESTA PROPIEDAD ES MUY BUENA PORQUE SINO TENDRIAS QUE USAR JAVASCRIPT O JQUERY, PORQUE CON CSS NO SE PUEDE BUENA PROPIEDAD */
+    align-items: center;
+}
+.contenedor-padre-flexbox-4 {
+    width: 80%;
+    height: 500px;
+    background: #ff5c29;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* siempre que tengas dos hileras de hijos */
+    align-content: space-between;
+}
+.hijo-1 {
+    background: #00b285;
+    width: 200px;
+    height: 100px;
+    color: white;
+    margin: 30px;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+/* .contenedor-abuelo {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+
+    background-color: black;
+} */
+.contenedor-padre-flexbox-5 {
+    width: 80%;
+    /* se bloqueo la altura para que sea dinamica */
+    /* height: 500px; */
+    background: #222831;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* siempre que tengas dos hileras de hijos */
+    align-content: space-between;
+}
+.hijo-2 {
+    background: #c1a57b;
+    width: 200px;
+    height: 100px;
+    color: #ececec;
+    margin: 30px;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+    /* que todas abarquen lo que tenga que abarcar y si sobra espacio las ultimas ocupan proporcionalmente todo */
+    /* flex-grow: 1;
+    flex-shrink: 0; */
+    /* es lo mismo de arriba si lo hago con tan solo flex */
+    flex: 1 1 auto;
+}
+.mejorando-letra-1 {
+    font-family: 'Fjalla One', sans-serif;
+    /* LE DI CONTORNO A LA LETRA PARA UTILIZARLO NADA MAS,antes habia algun navegador que no soportaba esta funcion ahora todos la soportan */
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #222831;
+}
+.padre-padre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+}
+/* asi se puede hacer para asignar las propiedades de hijo */
+.header, .articulo, .izquierda, .derecha, .footer {
+    flex-grow: 1;
+    /* con flex-basis le estamos diciendo que abarque el 100%de todas las lineas */
+    flex-basis: 100%;
+    padding: 10px;
+}
+@media all and (min-width: 600px) {
+    /* esto hizo que el aside izq y el der. esten en la misma linea toma el valor groy y el basis auto ---IMPORTANTE----- */
+    .aside{flex:1 1 auto;}
+}
+@media all and (min-width: 800px){
+    .articulo{flex:2 0;}
+    .izquierda{order:1;}
+    .articulo{order:2;}
+    .derecha{order:3;}
+    .footer{order:4;}
+
+}
+.header{background: #581845;}
+.articulo{background: #ffc300;}
+.izquierda{background: #900c3f;}
+.derecha{background: #c70039;}
+.footer{background: #daf7a6;}
+
+footer {
+    background: crimson;
+}
